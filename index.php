@@ -23,7 +23,6 @@
       echo '<script>alert("Nepasirinkote vaidmens");</script>';
     } else {
       // Jei vaidmuo pasirinktas, galima tęsti formos apdorojimą
-      // Čia galima nukreipti, ar atlikti kitus veiksmus
     }
   }
   ?>

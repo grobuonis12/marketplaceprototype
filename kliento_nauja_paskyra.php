@@ -41,7 +41,6 @@
         $email = $_POST['email'];
         $slaptazodis = $_POST['slaptazodis'];
 
-        // Address handling with failsafe
         $adresas = $_POST['adresas'];
         if (empty($adresas) || $adresas === '0') {
             $adresas = "Dėl tikslaus adreso kreiptis Kliento tel nr.";

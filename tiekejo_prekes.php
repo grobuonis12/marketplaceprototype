@@ -35,7 +35,7 @@ $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
-<html lang="lt"> <!-- Nurodome kalbą: lietuvių -->
+<html lang="lt">
 <head>
     <title>Jūsų Prekių Katalogas</title>
     <link rel="stylesheet" type="text/css" href="style.css">

@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enteredQuantity']) && 
                     error_log("Klaida perkeldant užsakymą su ID: $itemId - " . $conn->error);
                 }
             } else {
-                // Remaining code for handling quantity mismatch
+                // Kodas jeigu neatitinka užsakymo kiekis su įvestu
                 $supplierQuery = "SELECT tiekejai.* FROM prekes 
                                   INNER JOIN tiekejai ON prekes.TiekejoID = tiekejai.TiekejoID 
                                   WHERE prekes.PrekesID = '$prekesId'";

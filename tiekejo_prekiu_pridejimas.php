@@ -7,19 +7,19 @@
 <body>
     <h2>Pridėti produktą</h2>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <!-- Laukas produktui įvesti -->
+        
         <label for="pavadinimas">Pavadinimas:</label><br>
         <input type="text" id="pavadinimas" name="pavadinimas"><br>
         
-        <!-- Laukas kategorijai įvesti -->
+        
         <label for="kategorija">Kategorija(Skaičius):</label><br>
         <input type="text" id="kategorija" name="kategorija"><br>
         
-        <!-- Laukas kiekiui įvesti -->
+        
         <label for="kiekis">Kiekis(Skaičius):</label><br>
         <input type="text" id="kiekis" name="kiekis"><br>
         
-        <!-- Laukas kainai įvesti su 10% mokesti -->
+       
         <label for="kaina">Kaina(Skaičius) (+10% prie kainos tarpininko mokestis):</label><br>
         <input type="text" id="kaina" name="kaina"><br><br>
         

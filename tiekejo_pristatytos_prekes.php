@@ -56,7 +56,7 @@
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            // Perform the calculation here for "Užsakymo vertė"
+         
             $uzsakymoVerte = $row["Kiekis"] * $row["Kaina"];
 
             echo "<tr>

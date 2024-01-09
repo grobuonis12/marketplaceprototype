@@ -7,7 +7,7 @@ if (!isset($_SESSION['supplierDetails'])) {
 }
 
 $supplierDetails = $_SESSION['supplierDetails'];
-unset($_SESSION['supplierDetails']); // Clear session after retrieving details
+unset($_SESSION['supplierDetails']); // anuliuoti sesija po duomenų gavimo
 
 $servername = "localhost";
 $username = "ugnius";
@@ -28,18 +28,18 @@ if ($conn->connect_error) {
     <title>Tiekėjo Informacija</title>
 </head>
 <body>
-    <!-- Display supplier details -->
+    
     <div>
         <?php
             echo $supplierDetails;
             
-            $tiekejoId = ''; // Extract TiekejoID from the $supplierDetails string
+            $tiekejoId = ''; // ištraukti TiekejoID iš $supplierDetails string
             preg_match('/TiekejoID:\s*([\d]+)/', $supplierDetails, $matches);
             if (count($matches) > 1) {
                 $tiekejoId = $matches[1];
             }
 
-            // Fetch and display Kontaktas for the extracted TiekejoID
+            
             $kontaktasQuery = "SELECT Kontaktas FROM tiekejai WHERE TiekejoID = '$tiekejoId'";
             $kontaktasResult = $conn->query($kontaktasQuery);
             

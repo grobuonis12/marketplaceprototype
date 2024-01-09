@@ -50,14 +50,14 @@
           if ($result->num_rows > 0) {
               echo "Šis paštas jau naudojamas.";
           } else {
-              // Insert into tiekeju_paskyros only if the email is not in use
+             
               $insert_tiekeju_paskyros = "INSERT INTO tiekeju_paskyros (email, slaptazodis) 
                                           VALUES (?, ?)";
               $stmt = $conn->prepare($insert_tiekeju_paskyros);
               $stmt->bind_param("ss", $email, $slaptazodis);
               $stmt->execute();
 
-              // Get the ID of the last inserted row in tiekeju_paskyros
+             
               $last_inserted_id = $conn->insert_id;
 
               $insert_tiekejai = "INSERT INTO tiekejai (TiekejoID, Pavadinimas, Kontaktas, TiekejoPaskyrosID, Adresas) 

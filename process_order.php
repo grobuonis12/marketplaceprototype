@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach ($selectedItems as $itemId) {
             $quantity = $selectedQuantities[$itemId]; // Gaunamas kiekis pagal pasirinktą elementą
 
-            $orderDate = date("Y-m-d"); // Gaunama užsakymo data
+            $orderDate = date("Y-m-d"); 
 
             // Gaunami TiekejoID ir Kaina iš prekes lentelės pagal duotą PrekesID
             $query = "SELECT TiekejoID, Kaina FROM prekes WHERE PrekesID = '$itemId'";
@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $conn->close(); // Uždaromas ryšys su duomenų baze
 
-        // Po užsakymo apdorojimo nukreipimas į klientu_uzsakymai.php puslapį
         header("Location: klientu_uzsakymai.php");
         exit();
     }

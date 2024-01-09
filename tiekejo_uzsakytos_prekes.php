@@ -54,7 +54,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $tiekejo_id = $_SESSION['TiekejoPaskyrosID']; // Fetch the logged-in TiekejoID
+    $tiekejo_id = $_SESSION['TiekejoPaskyrosID']; 
 
     $sql = "SELECT u.UzsakymoID, p.Pavadinimas, u.Kiekis, u.UzsakymoData 
             FROM uzsakymai u

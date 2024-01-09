@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lt"> <!-- Lithuanian language -->
+<html lang="lt">
 <head>
   <title>Tiekėjo Pagrindinis</title>
   <link rel="stylesheet" type="text/css" href="style.css">
